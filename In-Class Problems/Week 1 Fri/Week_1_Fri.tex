@@ -2,7 +2,7 @@
 
 % Packages
 \usepackage[utf8]{inputenc}
-\usepackage{amssymb} % For QED symbol.
+\usepackage{amssymb} 
 
 \title{6.042J/18.062J, Spring '15: Mathematics for Computer Science}
 \author{Chidera Uchenwoke}
@@ -21,7 +21,7 @@
 \subsubsection{Problem 1.}
 \textbf{\(P := \) Prove that if $a \cdot b = n $, then either $a$ or $b$ must be $\leq \sqrt{n}$, where $a$, $b$ and $n$ are nonnegative real numbers. \textit{Hint:} by contradiction Section 1.8 in the course textbook.}
 \\[5pt]
-Solution: We use proof by contradiction. Suppose \(P\) is false. Therefore \(a\) and \(b\) are \(>\) \(n\).
+Solution: We use proof by contradiction. Suppose \(P\) is false. Therefore, there exists \(a\) and \(b\) are \(>\) \(\sqrt{n}\). Whilst $a \cdot b = n$.
 \[a \cdot b > \sqrt{n} \cdot \sqrt{n} = n\]
 
 \noindent This is a contradiction. Therefore \(P\) must be true.
@@ -35,7 +35,7 @@ Solution: We use proof by contradiction. Suppose \(\sqrt{3}\) is rational.
 Where \(n\) and \(d\) are the lowest terms.
 \[\Rightarrow 3 = \frac{n^2}{d^2}\]
 \[\Rightarrow 3d^2 = n^2 \]
-\(n^2\) is a factor of 3 which is only possible if \(n\) is also a factor of 3 as shown below:
+\(n^2\) is a factor of 3 which is only possible if \(n\) is also a factor of 3:
 \[\Rightarrow n = 3k\]
 Where \(k \in \mathbb{N}\).
 \[\Rightarrow n^2 = (3k)^2 = 9k^2\]
@@ -45,6 +45,11 @@ Therefore \(d^2\) is a factor of 3 which is only possible if \(d\) is a factor o
 \\[5pt]
 Above we prove \(n\) and \(d\) have a common factor of 3, therefore \(n\) and \(d\) are not the lowest terms. This a contradiction. Therefore $\sqrt{3}$ is an irrational number.
 $\blacksquare$
+\\[5pt]
+\noindent
+\textbf{My Extra(s):\\
+1. Prove that the square root of all prime numbers are irrational.\\
+2. Since $n^{2}$ is a factor of 3, prove that $n$ must also be a factor of 3.}
 
 \subsubsection{Problem 3.}
 \textbf{If we raise an irrational number to an irrational power, can the result be rational? Show that it can by considering $\sqrt{2}^{\sqrt{2}}$ and arguing by cases.}
@@ -69,5 +74,9 @@ Therefore $b$, an irrational number, raised to the power of $c$ also an irration
 Let $a = \sqrt{10}$,  $b = \log_{10}4$.
 \[\Rightarrow a^{b} = \sqrt{10}^{\log_{10}4}\]
 \[\Rightarrow \sqrt{10}^{\log_{10}4} = 10^{\log_{10}4^{1/2}} = 10^{\log_{10}2} = 2\]
+$ \blacksquare $
+
+\subsubsection{Problem 4.}
+\textbf{The fact that that there are irrational numbers $a$, $b$ such that $a^{b}$ is rational was proved earlier by cases. Unfortunately, that proof was nonconstructive: it didn't reveal a specific pair, $a$, $b$ with this property. But in fact, it's easy to do this: let $a := \sqrt{2}$ and $b := 2\log_{2}3$. We know that $a = \sqrt{2}$ is irrational and $a^{b} = 3$ by definition. Finish the proof that these values for $a$, $b$ work, by showing that $2\log_{2}3$ is irrational.}
 
 \end{document}
