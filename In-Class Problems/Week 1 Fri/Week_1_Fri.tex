@@ -1,0 +1,71 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb} % For QED symbol.
+
+\title{6.042J/18.062J, Spring '15: Mathematics for Computer Science}
+\author{Chidera Uchenwoke}
+\date{September 2022}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+\section{In-Class Problems \& Solutions}
+\subsection{Week 1, Fri}
+
+\subsubsection{Problem 1.}
+\(P := \) Prove that if \(a \cdot b = n \), then either \( a\) or \( b\) must be \(\leq \sqrt{n}\), where \(a\), \(b\) and \(n\) are nonnegative real numbers. \textit{Hint:} by contradiction Section 1.8 in the course textbook. 
+\\[5pt]
+Solution: We use proof by contradiction. Suppose \(P\) is false. Therefore \(a\) and \(b\) are \(>\) \(n\).
+\[a \cdot b > \sqrt{n} \cdot \sqrt{n} = n\]
+
+\noindent This is a contradiction. Therefore \(P\) must be true.
+$ \blacksquare $
+
+\subsubsection{Problem 2.}
+Generalise the proof of Theorem 1.8.1 repeated below that $\sqrt{2}$ is irrational in the course textbook. For example, how about $\sqrt{3}$?.
+\\[5pt]
+Solution: We use proof by contradiction. Suppose \(\sqrt{3}\) is rational. 
+\[\Rightarrow \sqrt{3} = \frac{n}{d}\]
+Where \(n\) and \(d\) are the lowest terms.
+\[\Rightarrow 3 = \frac{n^2}{d^2}\]
+\[\Rightarrow 3d^2 = n^2 \]
+\(n^2\) is a factor of 3 which is only possible if \(n\) is also a factor of 3 as shown below:
+\[\Rightarrow n = 3k\]
+Where \(k \in \mathbb{N}\).
+\[\Rightarrow n^2 = (3k)^2 = 9k^2\]
+\[\Rightarrow 3d^2 = 9k^2\]
+\[\Rightarrow d^2 = 3k^2\]
+Therefore \(d^2\) is a factor of 3 which is only possible if \(d\) is a factor of 3 as well.
+\\[5pt]
+Above we prove \(n\) and \(d\) have a common factor of 3, therefore \(n\) and \(d\) are not the lowest terms. This a contradiction. Therefore $\sqrt{3}$ is an irrational number.
+$\blacksquare$
+
+\subsubsection{Problem 3.}
+We argue by cases. Where \(a = \sqrt{2}^{\sqrt{2}}, b = \sqrt{2}\).
+\\[5pt]
+\textbf{Case 1:} \textit{We assume $a$ is irrational.}
+b is known to be irrational - \textbf{Theorem.} \textit{$\sqrt{2}$ is irrational.} 
+\[\Rightarrow a^{b} = \Bigl(\sqrt{2}^{\sqrt{2}}\Bigr)^{\sqrt{2}}\]
+\[\Rightarrow \Bigl(\sqrt{2}^{\sqrt{2}}\Bigr)^{\sqrt{2}} = \sqrt{2}^{\sqrt{2} \times \sqrt{2}} = \sqrt{2}^{2} = 2.\]
+2 can be written in the form $\frac{n}{d}$ where its lowest terms are $n = 2$ and $d = 1$. Therefore by definition, 2 is a rational number. \textit{Case 1} thus shows a irrational number raised to the power of irrational number can produce a rational number.
+\\[5pt]
+\noindent
+\textbf{Case 2:} \textit{We assume $a$ is rational.} We introduce a third term $c$ where $c = \sqrt{2}$ - an irrational number. 
+\[\Rightarrow b^{c} = \sqrt{2}^{\sqrt{2}}\]
+Therefore $b$, an irrational number, raised to the power of $c$ also an irrational number produces a rational number, $a$.
+\\[5pt]
+\noindent
+\textbf{Extra: Chris Reineke} - He came up with a constructive proof i.e., a specific pair of irrational numbers with this property. 
+\\[5pt]
+\noindent
+Let $a = \sqrt{10}$,  $b = \log_{10}4$.
+\[\Rightarrow a^{b} = \sqrt{10}^{\log_{10}4}\]
+\[\Rightarrow \sqrt{10}^{\log_{10}4} = 10^{\log_{10}4^{1/2}} = 10^{\log_{10}2} = 2\]
+
+\end{document}
